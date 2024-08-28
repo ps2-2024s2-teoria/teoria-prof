@@ -1,15 +1,20 @@
-public class Serie {
-    private String titulo;
-    private int ano;
+public class Serie extends ObraCultural {
     private int qtdeEpisodios;
-    public Serie(String t, int a, int q) {
-        titulo = t;
-        ano = a;
+    private int duracaoEpisodio;
+    public Serie(String t, int a, int q, int d) {
+        super(t, a);
         qtdeEpisodios = q;
+        duracaoEpisodio = d;
     }
     void mostrar() {
-        System.out.println("Título: " + titulo);
-        System.out.println("Ano: " + ano);
+        super.mostrar();
         System.out.println("Qtde. Episódios: " + qtdeEpisodios);
+        System.out.println("Duração de cada episódio: " + duracaoEpisodio);
+    }
+    int tempoTotal() {
+        return qtdeEpisodios * duracaoEpisodio;
+    }
+    public int getQtdeEpisodios() {
+        return qtdeEpisodios;
     }
 }

@@ -1,15 +1,18 @@
-public class Filme {
-    private String titulo;
-    private int ano;
+public class Filme extends ObraCultural {
     private int duracao;
     public Filme(String t, int a, int d) {
-        titulo = t;
-        ano = a;
+        super(t, a);
         duracao = d;
     }
     void mostrar() {
-        System.out.println("Título: " + titulo);
-        System.out.println("Ano: " + ano);
+        super.mostrar();
         System.out.println("Duração: " + duracao);
     }
+    int tempoTotal() {
+        return duracao;
+    }
+    public int getDuracao() {
+        return duracao;
+    }
+
 }
