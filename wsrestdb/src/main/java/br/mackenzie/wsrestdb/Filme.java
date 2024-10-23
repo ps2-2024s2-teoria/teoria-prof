@@ -1,11 +1,12 @@
 package br.mackenzie.wsrestdb;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
 public class Filme {
-    @Id
+    @Id @GeneratedValue
     private long id;
     private String titulo;
     private int ano;
